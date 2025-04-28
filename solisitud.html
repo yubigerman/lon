@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Ingreso Escolar</title>
+    <link rel="stylesheet" href="solicitud.css"> <!-- Archivo CSS externo -->
+    <link rel="stylesheet" href="solicitud.js">
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+   <section></section>
+    <form id="school-application-form">
+        <h2>Formulario de Solicitud</h2>
+        <br>
+        <label for="name">Nombre del estudiante:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección completa" required>
+<br>
+<label for="telefono">Teléfono:</label>
+<input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+        <!-- Ciudad -->
+
+        <label for="grade">Grado que desea ingresar:</label>
+        <select id="grade" name="grade" required>
+            <option value="kinder">Kinder</option>
+            <option value="primaria">Pre-kinder</option>
+            <option value="secundaria">Primaria</option>
+        </select><br><br>
+
+        <label for="message">Mensaje adicional:</label>
+        <textarea id="message" name="message" required></textarea><br>
+        <br>
+        <button class="btn-back" onclick="history.back()">
+            <span class="arrow">←</span><center> Volver atrás</center>
+
+        
+
+        </button>
+          
+<br>
+ <a href="#" id="generatePdfLink">Generar PDF y Redirigir</a>
+ <!-- <h1>Contenido a convertir a PDF</h1>
+<div id="content">
+    <p>Este es el contenido que será convertido a un archivo PDF.</p>
+</div>
+-->
+<script>
+   
+</script>
+  
+</body>
+</html>

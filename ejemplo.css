@@ -1,0 +1,66 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Teacher session container */
+.teacher-session {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Teacher card styling */
+.teacher-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.teacher-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Teacher photo styling */
+.teacher-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Teacher name styling */
+.teacher-name {
+  font-size: 20px;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+/* Teacher role styling */
+.teacher-role {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .teacher-session {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .teacher-card {
+      width: 90%;
+  }
+}

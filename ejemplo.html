@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Enviar Formulario a WhatsApp</title>  
+    <script>  
+        function enviarFormulario() {  
+            var numero = "8299349083"; // Cambia esto por el número de WhatsApp  
+            var nombre = document.getElementById("nombre").value; // Obtiene el nombre del usuario  
+            var mensaje = document.getElementById("mensaje").value; // Obtiene el mensaje del usuario  
+            
+            // Crea un mensaje que combina el nombre y el mensaje  
+            var mensajeCompleto = `Nombre: ${nombre}\nMensaje: ${mensaje}`;  
+            var mensajeCodificado = encodeURIComponent(mensajeCompleto); // Codifica el mensaje para incluirlo en la URL  
+            
+            var urlWhatsApp = `https://wa.me/${numero}?text=${mensajeCodificado}`; // Crea la URL para WhatsApp  
+            window.open(urlWhatsApp, "_blank"); // Abre la URL en una nueva pestaña  
+        }  
+    </script>  
+</head>  
+<body>  
+    <h1>Enviar Formulario a WhatsApp</h1>  
+    <form id="miFormulario">  
+        <label for="nombre">Nombre:</label><br>  
+        <input type="text" id="nombre" name="nombre" required><br><br>  
+        <label for="mensaje">Mensaje:</label><br>  
+        <textarea id="mensaje" rows="4" cols="50" placeholder="Escribe aquí tu mensaje..." required></textarea><br><br>  
+        <button type="button" onclick="enviarFormulario()">Enviar a WhatsApp</button>  
+    </form>  
+</body>  
+</html>
